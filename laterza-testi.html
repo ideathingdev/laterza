@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Segreto di Laterza</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+
+    body {
+      font-family: "EB Garamond";
+      text-align: center;
+  text-justify: inter-word;
+      margin: 0;
+      padding: 0;
+      font-size: 150%;
+      font-weight: medium;
+      background-color: #F8F5EC;
+   
+      /* TEXT COLOUR */
+      color: #513538;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+
+    #content {
+      padding: 20px;
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <p style="font-weight: 500;" id="displayText"></p>
+  </div>
+
+  <script>
+
+const displayText = document.getElementById("displayText");
+  const queryParams = new URLSearchParams(window.location.search);
+  const queryValue = queryParams.get("n");
+
+  switch (queryValue) {
+    case "por":
+      displayText.innerHTML = "Por";
+      displayText.style = "font-size:300%"
+      break;
+    case "cel":
+      displayText.innerHTML = "Cel";
+      displayText.style = "font-size:300%"
+      break;
+    case "lana":
+      displayText.innerHTML = "Lana";
+      displayText.style = "font-size:300%"
+      break;
+
+      case "sparviero":
+      displayText.innerHTML = "Uno degli eventi importanti per la storia locale degli inizi del ‘600 fu sicuramente l’arrivo da Napoli di Giuseppe d’Azzia, 5° Marchese di Laterza, Conte di Noia, Grande di Spagna. <br> <br> Alla morte di Giovan Battista II d’Azzia (22 luglio del 1608), Giuseppe eredita il feudo laertino all’età di soli 17 anni. Per questo, data la tenera età, il giovane era affidato alla guida dello zio Fra’ Fabrizio d’Azzia, fratello del nonno Pietro Antonio II e cavaliere di Malta, <b>detto lo Sparviero.</b>";
+      break;
+
+      case "matrimonio":
+      displayText.innerHTML = "Sul finire del 1608, Giuseppe sposa Isabella Aldano, figlia di Diego e Maria Belmundez de Castro. <br> <br> Il matrimonio era stato combinato dal padre Giovan Battista II, che aveva stipulato le trattative del matrimonio con la ricca famiglia spagnola già pochi giorni prima di morire.";
+      break;
+
+      case "fuoco":
+      displayText.innerHTML = "Quando nel 1610 insieme alla sposa il giovane marchese fa il suo ingresso a Laterza, la popolazione lo accoglie con festeggiamenti. L’evento viene descritto nei volumi manoscritti dei Consilia Criminalia, un documento dell’epoca scritto dall’avvocato materano Orazio Persio. <br>In questo testo si parla di festeggiamenti sontuosi, svolti con grande sfarzo, dispendio e anche con lo sparo di fuochi d’artificio (“in tot tantisque igneis fulgoribus et aliis”). <br><br> Si trattò probabilmente del primo e più antico uso di fuochi d’artificio a Laterza e, comunque, è evidente che l’ingresso nel feudo dei nuovi marchesi venne vissuto come un evento significativo e di notevole importanza.";
+      break;
+
+      case "ombra":
+      displayText.innerHTML = "Da secoli i nobili di Laterza fungono da informatori per il Governo Ombra. Essi raccolgono informazioni sull’influenza delle varie organizzazioni segrete e le diffondono in segreto tramite le celebri Porcellane di Laterza. <br><br><b>E’ lo schema dei colori la chiave di lettura di queste porcellane.</b><br> Il Blu è utilizzato per mostrare quanto il Governo Ombra è influente in un area, mentre il Giallo rappresenta l’Occhio Reale. <br><br> Quando un nobile di Laterza invia una delle sue porcellane in una regione, sta in realtà informando i membri del Governo Ombra di quanto abbiano il reale controllo su quella zona. Tanto più Giallo è presente nella Porcellana, tanto più l’Occhio ha guadagnato influenza nella regione.";
+      break;
+
+    default:
+      displayText.innerHTML = "Prova";
+      displayText.style = "font-size:300%"
+      break;
+  }
+  </script>
+</body>
+
+</html>

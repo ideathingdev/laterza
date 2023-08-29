@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Segreto di Laterza</title>
+  <style>
+      @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+    body {
+      font-family: "EB Garamond";
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #F8F5EC;
+      /* TEXT ALIGN */
+      text-align: center;
+      /* TEXT COLOUR */
+      color: #513538;
+      font-size: 150%;
+      font-weight: medium;
+    }
+
+    #content {
+      padding: 20px;
+    }
+
+    #inputForm,
+    #result {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+    }
+
+    #result {
+      display: none;
+    }
+
+    #btn {
+      color: white;
+      font-family: "EB Garamond";
+     
+      font-weight: bold;
+      background-color: #555555;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+    
+    }
+
+ 
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Il Segreto di Laterza</h1>
+    <form id="inputForm">
+      <label for="textInput">Inserisci una password:</label>
+      <br> <br>
+      <input type="text" style=" border-radius: 6px; font-size: 16px; " id="textInput" name="textInput">
+      <button type="button" class="btn" style ="color:white; font-family: 
+      'EB Garamond'; 
+      font-weight:600;
+           background-color: #555555;
+      border: none;
+      border-radius: 6px; 
+      font-size: 16px;" onclick="checkText()">Conferma</button>
+    </form>
+    <div id="result">
+      <p id="successMessage">Congratulations! You entered the correct predefined text.</p>
+    </div>
+  </div>
+  <script>
+
+    const form = document.getElementById("inputForm");
+    const inputElement = document.getElementById("textInput");
+    const resultElement = document.getElementById("result");
+    const successMessage = document.getElementById("successMessage");
+
+    function checkText() {
+
+
+      const inputText = inputElement.value.toLowerCase();
+      var corretto = true;
+      switch (inputText) {
+        case "mazzo":
+          successMessage.innerHTML = "Questo indovinello vale <b>5</b> Punti";
+          break;
+        case "arcobaleno":
+          successMessage.innerHTML = "Questo indovinello vale <b>2</b> Punti";
+          break;
+        case "spada":
+          successMessage.innerHTML = "Questo indovinello vale <b>4</b> Punti";
+          break;
+        case "io":
+          successMessage.innerHTML = "Questo indovinello vale <b>2</b> Punti";
+          break;
+
+        case "silenzio":
+          successMessage.innerHTML = "Questo indovinello vale <b>3</b> Punti";
+          break;
+        case "eletti":
+          successMessage.innerHTML = "Le informazioni raccolte dai nostri agenti confermano i nostri sospetti. <br> <br> La Reliquia celata a Laterza non è un oggetto ma un segreto custodito da secoli. <br><br>Uno dei nostri uomini è riuscito a scoprire qual è. <br><br>Rintracciatelo, è vestito come una guardia del 1600, convincetelo a rivelarvi il segreto riferendogli la parola in codice “Oltreuomo” e riferitelo alla Marchesa";
+          break;
+        case "porcellana":
+          successMessage.innerHTML = "Perdonate questo inganno. <br>  Siamo noi del Governo Ombra a custodire la Reliquia di Laterza, il segreto tenuto per secoli. Se non ve lo abbiamo rivelato direttamente è perché alcuni membri dell’Occhio Reale si sono infiltrati tra le nostre fila, e dovevamo essere sicuri di poterci fidare di voi. <br><br>Temiamo che una di queste spie abbia scoperto il segreto, e ora attenda altri agenti dell’Occhio per svelarlo. E’ fondamentale che voi scopriate chi sia. <br>Sospettiamo sia vestito come una delle Guardie del 1600 presenti all’evento. <br><br>Trovatelo e ditegli la parola in codice “Oltreuomo”. Se vi rivelerà il segreto, vuol dire che è realmente lui il traditore. <br>Quando lo avrete trovato, riferitelo al Marchese, si occuperà lui della faccenda.";
+          break;
+
+        default:
+          successMessage.innerHTML = "Hai inserito un codice incorretto";
+          corretto = false;
+          break;
+      }
+
+      if (corretto) {
+        form.style.display = "none";
+
+      }
+      resultElement.style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
