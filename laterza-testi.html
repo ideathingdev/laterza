@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il Segreto di Laterza</title>
   <style>
-    @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
     body {
-      font-family: "EB Garamond";
+      font-family: "Roboto Slab";
       text-align: center;
   text-justify: inter-word;
       margin: 0;
@@ -23,13 +23,15 @@
       display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     }
 
     #content {
       padding: 20px;
-      display: block;
+      display: block; 
       margin: 0 auto;
+
+height: 100%;
       width: 70%;
     }
 
@@ -80,8 +82,7 @@ const displayText = document.getElementById("displayText");
       break;
 
     default:
-      displayText.innerHTML = "Prova";
-      displayText.style = "font-size:300%"
+      displayText.innerHTML = "Da secoli i nobili di Laterza fungono da informatori per il Governo Ombra. Essi raccolgono informazioni sull’influenza delle varie organizzazioni segrete e le diffondono in segreto tramite le celebri Porcellane di Laterza. <br><br><b>E’ lo schema dei colori la chiave di lettura di queste porcellane.</b><br> Il Blu è utilizzato per mostrare quanto il Governo Ombra è influente in un area, mentre il Giallo rappresenta l’Occhio Reale. <br><br> Quando un nobile di Laterza invia una delle sue porcellane in una regione, sta in realtà informando i membri del Governo Ombra di quanto abbiano il reale controllo su quella zona. Tanto più Giallo è presente nella Porcellana, tanto più l’Occhio ha guadagnato influenza nella regione.";
       break;
   }
   </script>
